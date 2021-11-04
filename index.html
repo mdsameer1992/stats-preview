@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Lexend+Deca:wght@200;400&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | Stats preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+            transform: translate(-50%, -50%);
+            top: 98%;
+            left: 50%;
+            position: absolute;
+            color: hsl(0, 0%, 100%);
+        }
+        
+        .attribution a {
+            color: hsl(0, 0%, 100%);
+        }
+        
+        body {
+            background-color: hsl(233, 47%, 7%);
+        }
+        
+        p {
+            color: hsla(0, 0%, 100%, 0.75);
+            font-size: 14px;
+            font-weight: 400;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        h1 {
+            color: hsl(0, 0%, 100%);
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .head1 {
+            color: hsl(0, 0%, 100%);
+            font-family: 'Lexend Deca', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        
+        .hd {
+            color: hsla(0, 0%, 100%, 0.6);
+            text-transform: uppercase;
+            word-spacing: 1.2;
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-weight: 400;
+        }
+        
+        .card {
+            background-color: hsl(244, 38%, 16%);
+            width: 60%;
+            overflow: hidden;
+            border-radius: 20px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 48%;
+            left: 50%;
+            margin-right: 50%;
+        }
+        
+        .content {
+            width: calc(50% - 20px);
+            height: auto;
+            font-family: 'Inter', sans-serif;
+            padding: 20px 0px 20px 20px;
+        }
+        
+        .imag {
+            float: right;
+            width: 50%;
+        }
+        
+        .stats {
+            display: flex;
+            gap: 60px;
+            margin-top: 50px;
+        }
+        
+        .overlayc {
+            background-color: hsl(277, 64%, 61%);
+            position: absolute;
+            display: inline-block;
+            opacity: 0.7;
+            width: 50%;
+            height: 100%
+        }
+        
+        @media only screen and (max-width:1214px) {
+            body {
+                text-align: center;
+            }
+            .content {
+                width: 100%;
+                max-width: 400px;
+                box-sizing: border-box;
+                padding: 20px;
+            }
+            .card {
+                width: 60%;
+                max-width: 400px;
+                height: auto;
+                margin: auto;
+                top: unset;
+                left: unset;
+                transform: none;
+                position: unset;
+            }
+            .imag {
+                width: 100%;
+                max-width: 400px;
+                display: inline-block;
+                float: none;
+            }
+            .overlayc {
+                /* background-color: hsl(277, 64%, 61%);
+                position: absolute;
+                display: inline-block;
+                opacity: 0.7;
+                max-width: 400px;
+                width: 100%;
+                height: 100%;
+                top: 0%;
+                bottom: 0%;
+                right: 0%;
+                left: 0%; */
+                display: none;
+            }
+            img {
+                float: none;
+                width: inherit;
+            }
+            .attribution {
+                transform: unset;
+                top: unset;
+                left: unset;
+                position: unset;
+                margin: auto;
+            }
+            .stats {
+                margin-top: 20px;
+            }
+        }
+        
+        @media only screen and (max-width:620px) {
+            .stats {
+                gap: 40px;
+            }
+        }
+        
+        @media only screen and (max-width:550px) {
+            .stats {
+                gap: 15px;
+                flex-direction: column;
+                align-items: center;
+            }
+            .stats>div {
+                width: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="card">
+            <div class="imag">
+                <img src="image-header-desktop.jpg" alt="pic" style="max-width:100%;height:auto; float: right;">
+                <div class="overlayc">
+
+                </div>
+            </div>
+            <div class="content">
+                <h1> Get <span style="color:hsl(277, 64%, 61%);">insights</span> that help your business grow.</h1>
+                <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.</p>
+                <div class="stats">
+                    <div><span class="head1">10k+</span> <span class="hd">companies</span></div>
+                    <div><span class="head1">314</span> <span class="hd">templates</span></div>
+                    <div><span class="head1">12M+</span> <span class="hd">queries</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Sameer</a>.
+        </div>
+    </div>
+</body>
+
+</html>
